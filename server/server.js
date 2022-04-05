@@ -2,7 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 require("./config/config")
-
+app.get("/", (req,res)=>{
+    res.status(200).json({message: "este es el proyecto de johan"})
+})
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
